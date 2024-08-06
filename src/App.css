@@ -1,42 +1,75 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.container__header {
+  width: 100vw;
+  height: 80px;
+}
+
+.container__header__primaryBar__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #000000;
+}
+
+.container__header__primaryBar__content__menuIcon {
+  height: 80%;
+}
+
+.container__header__primaryBar__content__textTitle {
+  color: white;
+  font-size: 30px;
   text-align: center;
+  text-transform: uppercase;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container__header__secondBar {
+  position: absolute;
+  height: 100vh;
+  width: 80vw;
+  transform: translateX(0%);
+  top: 0;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-out;
+  -webkit-transition: transform 1s ease-out;
+  -moz-transition: transform 1s ease-out;
+  -ms-transition: transform 1s ease-out;
+  -o-transition: transform 1s ease-out;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
 }
 
-.card {
-  padding: 2em;
+.container__header__secondBar-close {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transition: transform 1s ease-out;
+  background-color: rosybrown;
 }
 
-.read-the-docs {
-  color: #888;
+.container__header__secondBar__content {
+  height: 80%;
+  width: 90%;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
