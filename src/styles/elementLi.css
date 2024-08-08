@@ -1,0 +1,22 @@
+.elementLi {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  border-top: 3px solid #fff;
+  padding-top: 10px;
+}
+
+.elementLi_img {
+  height: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.elementLi_paragraph>a {
+  color: #cfcfcf;
+  text-decoration: none;
+  text-transform: uppercase;
+}

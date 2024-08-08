@@ -29,15 +29,17 @@
 }
 
 .container__header__secondBar {
+  z-index: 5;
+  max-width: 300px;
   position: absolute;
   height: 100vh;
   width: 80vw;
   transform: translateX(0%);
   top: 0;
-  background-color: rosybrown;
+  background-color: #0d0c0c;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   transition: transform .5s ease-out;
   -webkit-transition: transform .5s ease-out;
   -moz-transition: transform .5s ease-out;
@@ -50,20 +52,22 @@
 }
 
 .container__header__secondBar-close {
+  z-index: 5;
+  max-width: 300px;
   position: absolute;
   top: 0;
   height: 100vh;
   width: 80vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transition: transform .3s ease-out;
-  background-color: rosybrown;
+  background-color: #0d0c0c;
   -webkit-transition: transform .3s ease-out;
   -moz-transition: transform .3s ease-out;
   -ms-transition: transform .3s ease-out;
@@ -71,17 +75,50 @@
 }
 
 .container__header__secondBar__content {
-  height: 80%;
+  height: calc(100% - 80px);
   width: 90%;
   position: sticky;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  color: #cfcfcf;
+  font-size: 1.6rem;
+}
+
+.container__header__secondBar__content__logo {
+  height: max-content;
+  width: 100%;
+  max-width: 235px;
+  object-fit: contain;
+}
+
+.container__header__secondBar__content__ElementsNav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container__header__secondBar__content__ElementsNav__languages {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.container__header__secondBar__content__ElementsNav__languages__ES,
+.container__header__secondBar__content__ElementsNav__languages__EN {
+  width: 50%;
+  text-align: center;
+  background-color: #292828;
+  padding: .8rem 0;
 }
 
 /* Home */
-
 .home {
   height: calc(100vh - 80px);
   width: 100vw;
@@ -102,6 +139,7 @@
 }
 
 .home__texts {
+  z-index: 1;
   height: 90%;
   width: 90%;
   text-align: center;

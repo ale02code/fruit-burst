@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import MenuIcon from "../assets/icons/hamburger-menu.png";
 import Logo from "../assets/icons/logo-transparent.png";
+import HomeIcon from "../assets/icons/home.svg";
+import ReservationIcon from "../assets/icons/menu.svg";
+import UbicationIcon from "../assets/icons/ubication.svg";
+import ElementNav from "./ElementNav";
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -30,14 +34,25 @@ function Header() {
         }
       >
         <nav className="container__header__secondBar__content">
-          <img src="" alt="" />
-          <div>
-            <p>awsd</p>
+          <img
+            className="container__header__secondBar__content__logo"
+            src={Logo}
+            alt="Fruit Burst Logo"
+          />
+          <div className="container__header__secondBar__content__ElementsNav">
+            <ElementNav img={HomeIcon} text={"Inicio"} />
+            <ElementNav img={ReservationIcon} text={"Menu"} />
+            <ElementNav img={UbicationIcon} text={"Ubicación"} />
+            <section className="container__header__secondBar__content__ElementsNav__languages">
+              <div className="container__header__secondBar__content__ElementsNav__languages__ES">
+                ES
+              </div>
+              <div className="container__header__secondBar__content__ElementsNav__languages__EN">
+                EN
+              </div>
+            </section>
           </div>
-          <div>
-            <p>awsd*2</p>
-          </div>
-          <h4></h4>
+          <small>Fruit Burst S.A de C.V.</small>
         </nav>
       </aside>
     </header>
