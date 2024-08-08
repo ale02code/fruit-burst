@@ -9,7 +9,9 @@ function FirstScreen() {
         className="container_firstScreen__video"
         src={logoAnimation}
         autoPlay
+        loop
         muted
+        playsInline
       ></video>
     </div>
   );
