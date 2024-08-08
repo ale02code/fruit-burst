@@ -1,3 +1,5 @@
+/* Container Header */
+
 .container__header {
   width: 100vw;
   height: 80px;
@@ -36,11 +38,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 1s ease-out;
-  -webkit-transition: transform 1s ease-out;
-  -moz-transition: transform 1s ease-out;
-  -ms-transition: transform 1s ease-out;
-  -o-transition: transform 1s ease-out;
+  transition: transform .5s ease-out;
+  -webkit-transition: transform .5s ease-out;
+  -moz-transition: transform .5s ease-out;
+  -ms-transition: transform .5s ease-out;
+  -o-transition: transform .5s ease-out;
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
   -ms-transform: translateX(0%);
@@ -60,8 +62,12 @@
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
-  transition: transform 1s ease-out;
+  transition: transform .3s ease-out;
   background-color: rosybrown;
+  -webkit-transition: transform .3s ease-out;
+  -moz-transition: transform .3s ease-out;
+  -ms-transition: transform .3s ease-out;
+  -o-transition: transform .3s ease-out;
 }
 
 .container__header__secondBar__content {
@@ -72,4 +78,67 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* Home */
+
+.home {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__imgPresentation {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+.home__texts {
+  height: 90%;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.home__texts__title {
+  font-size: 2.5rem;
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
+  text-wrap: balance;
+}
+
+.home__texts__subtitle {
+  font-size: 1.6rem;
+  text-wrap: pretty;
+}
+
+.home__texts__button {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, .9);
+  padding: .8rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.home__texts__button>a {
+  color: #fff;
+  text-decoration: none;
+  padding: .8rem;
+  font-size: 1.5rem;
 }

@@ -32,10 +32,10 @@ function Header() {
         <nav className="container__header__secondBar__content">
           <img src="" alt="" />
           <div>
-            <p>as</p>
+            <p>awsd</p>
           </div>
           <div>
-            <p>asd</p>
+            <p>awsd*2</p>
           </div>
           <h4></h4>
         </nav>
