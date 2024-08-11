@@ -126,7 +126,7 @@
 
 /* Home */
 .home {
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
@@ -280,7 +280,7 @@
 }
 
 .menu__product__view__price__content {
-  color: green;
+  color: #008000;
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 1.7rem;
