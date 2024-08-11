@@ -354,12 +354,16 @@
 .rights {
   background-color: #000000;
   color: #fff;
-  height: 30px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: .5rem 0;
 }
 
 .rights__paragraph {
   text-transform: capitalize;
+  width: 90%;
 }
