@@ -15,9 +15,14 @@
   z-index: 4;
 }
 
+.elementLi_paragraph {
+  width: 100%;
+}
+
 .elementLi_paragraph>a {
   color: #cfcfcf;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
   width: 100%;
 }
