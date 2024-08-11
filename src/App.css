@@ -289,10 +289,77 @@
 
 /* Ubication */
 .ubication {
+  height: auto;
+  width: 100vw;
+  background-color: #292929;
+  color: #fff;
+  padding: 25px 15px;
+}
 
+.ubication__title {
+  text-align: center;
+  font-size: var(--size-title);
+  font-family: var(--font-primary);
+  margin-bottom: 25px;
+  /* text-decoration: underline; */
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .ubication__map {
   height: 300px;
   width: 100%;
+}
+
+/* Footer */
+.footer {
+  width: 100vw;
+  height: 250px;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__social {
+  width: 100%;
+}
+
+.footer__social a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__motto__text {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Rights */
+.rights {
+  background-color: #000000;
+  color: #fff;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rights__paragraph {
+  text-transform: capitalize;
 }

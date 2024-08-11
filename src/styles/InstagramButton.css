@@ -1,0 +1,23 @@
+.instagram {
+  max-width: 200px;
+  width: 65%;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.instagram:hover {
+  cursor: pointer;
+}
+
+.instagram__logo {
+  height: 50px;
+}
