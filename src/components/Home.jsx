@@ -1,5 +1,5 @@
 import React from "react";
-import ImgPresentation from "../assets/imgs/presentation.jpeg";
+import ImgPresentation from "../assets/imgs/presentation.webp";
 import Button from "./Button";
 
 function Home() {

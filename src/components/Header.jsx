@@ -47,7 +47,10 @@ function Header() {
             src={Logo}
             alt="Fruit Burst Logo"
           />
-          <div onClick={handleMenu} className="container__header__secondBar__content__ElementsNav">
+          <div
+            onClick={handleMenu}
+            className="container__header__secondBar__content__ElementsNav"
+          >
             <ElementNav img={HomeIcon} text={"Inicio"} reference={"#home"} />
             <ElementNav
               img={ReservationIcon}
