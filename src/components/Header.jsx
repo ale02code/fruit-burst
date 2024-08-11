@@ -40,9 +40,13 @@ function Header() {
             alt="Fruit Burst Logo"
           />
           <div className="container__header__secondBar__content__ElementsNav">
-            <ElementNav img={HomeIcon} text={"Inicio"} />
-            <ElementNav img={ReservationIcon} text={"Menu"} />
-            <ElementNav img={UbicationIcon} text={"Ubicación"} />
+            <ElementNav img={HomeIcon} text={"Inicio"} reference={"#home"} />
+            <ElementNav
+              img={ReservationIcon}
+              text={"Menu"}
+              reference={"#menu"}
+            />
+            <ElementNav img={UbicationIcon} text={"Ubicación"} reference={"#ubication"}/>
             <section className="container__header__secondBar__content__ElementsNav__languages">
               <div className="container__header__secondBar__content__ElementsNav__languages__ES">
                 ES

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 function Home() {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <img
         className="home__imgPresentation"
         src={ImgPresentation}

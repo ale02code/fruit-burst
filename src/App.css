@@ -7,6 +7,8 @@
 .container__header {
   width: 100vw;
   height: 80px;
+  position: fixed;
+  z-index: 50;
 }
 
 .container__header__primaryBar__content {
@@ -283,4 +285,14 @@
   font-weight: 400;
   font-size: 1.7rem;
   letter-spacing: 1px;
+}
+
+/* Ubication */
+.ubication {
+
+}
+
+.ubication__map {
+  height: 300px;
+  width: 100%;
 }
