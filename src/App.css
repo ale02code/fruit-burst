@@ -267,6 +267,10 @@
   font-size: var(--size-text);
 }
 
+.menu__product__view__topping {
+  color: #737373;
+}
+
 .menu__product__view__price {
   display: flex;
   align-items: center;
