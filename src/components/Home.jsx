@@ -17,7 +17,7 @@ function Home() {
           servicio y atención al cliente.
         </h2>
         <div className="home__texts__button">
-          <a href="">
+          <a href="#menu">
             <Button text={"Reserva tu Fruit Burst!"} />
           </a>
         </div>

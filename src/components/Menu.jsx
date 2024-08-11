@@ -6,7 +6,7 @@ import ProductView from "./ProductView";
 
 function Menu() {
   return (
-    <main className="menu">
+    <main className="menu" id="menu">
       <h3 className="menu__title">Menú</h3>
       <ProductView
         title={"Banana Milk"}
