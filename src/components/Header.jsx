@@ -26,6 +26,14 @@ function Header() {
           Fruit <br></br> Burst
         </h2>
       </div>
+      <div
+        className={
+          menu
+            ? "container__header__close_menu"
+            : "container__header__close_menu-close"
+        }
+        onClick={handleMenu}
+      ></div>
       <aside
         className={
           menu
@@ -39,14 +47,18 @@ function Header() {
             src={Logo}
             alt="Fruit Burst Logo"
           />
-          <div className="container__header__secondBar__content__ElementsNav">
+          <div onClick={handleMenu} className="container__header__secondBar__content__ElementsNav">
             <ElementNav img={HomeIcon} text={"Inicio"} reference={"#home"} />
             <ElementNav
               img={ReservationIcon}
               text={"Menu"}
               reference={"#menu"}
             />
-            <ElementNav img={UbicationIcon} text={"Ubicación"} reference={"#ubication"}/>
+            <ElementNav
+              img={UbicationIcon}
+              text={"Ubicación"}
+              reference={"#ubication"}
+            />
             <section className="container__header__secondBar__content__ElementsNav__languages">
               <div className="container__header__secondBar__content__ElementsNav__languages__ES">
                 ES

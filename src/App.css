@@ -34,6 +34,17 @@
   text-transform: uppercase;
 }
 
+.container__header__close_menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.container__header__close_menu-close {
+  width: 100vw;
+  height: 100vh;
+}
+
 .container__header__secondBar {
   z-index: 5;
   max-width: 300px;
