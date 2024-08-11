@@ -19,7 +19,7 @@ function ProductView({ title, desc, topping, fruit, product, price }) {
           ¡Puedes agregarle como topping {topping}!
         </p>
         <div className="menu__product__view__price">
-          <p className="menu__product__view__price__content">price: ${price}</p>
+          <p className="menu__product__view__price__content">Precio: ${price}</p>
           <Button text={"Reservar"} />
         </div>
       </section>

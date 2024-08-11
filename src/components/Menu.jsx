@@ -14,7 +14,7 @@ function Menu() {
         topping={"canela molida"}
         fruit={BananoImg}
         product={BananoBurstImg}
-        price={1.5}
+        price={1.50}
       />
       <ProductView
         title={"Fresa Milk"}
@@ -22,7 +22,7 @@ function Menu() {
         topping={"canela molida"}
         fruit={FresasImg}
         product={FresaBurstImg}
-        price={1.5}
+        price={1.50}
       />
     </main>
   );
