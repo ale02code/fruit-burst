@@ -9,9 +9,17 @@ import Rights from "./components/Rights";
 import "./App.css";
 
 function App() {
+  const visitCount = parseInt(localStorage.getItem("visitCount") || "0", 10);
+
+  const showFirstScreen = visitCount < 3;
+
+  if (showFirstScreen) {
+    localStorage.setItem("visitCount", visitCount + 1);
+  }
+
   return (
     <div className="container">
-      <FirstScreen />
+      {showFirstScreen && <FirstScreen />}
       <Header />
       <Home />
       <Menu />
