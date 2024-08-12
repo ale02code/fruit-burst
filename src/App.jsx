@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   const visitCount = parseInt(localStorage.getItem("visitCount") || "0", 10);
 
-  const showFirstScreen = visitCount < 3;
+  const showFirstScreen = visitCount < 2;
 
   if (showFirstScreen) {
     localStorage.setItem("visitCount", visitCount + 1);
