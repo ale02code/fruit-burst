@@ -6,6 +6,8 @@ import Menu from "./components/Menu";
 import Ubication from "./components/Ubication";
 import Footer from "./components/Footer";
 import Rights from "./components/Rights";
+import FormReservation from "./components/FormReservation";
+import { ReservationContextProvider } from "./context/ReservationContext";
 import "./App.css";
 
 function App() {
@@ -22,7 +24,10 @@ function App() {
       {showFirstScreen && <FirstScreen />}
       <Header />
       <Home />
-      <Menu />
+      <ReservationContextProvider>
+        <Menu />
+        <FormReservation />
+      </ReservationContextProvider>
       <Ubication />
       <Footer />
       <Rights />
