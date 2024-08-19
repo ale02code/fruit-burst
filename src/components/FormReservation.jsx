@@ -1,85 +1,97 @@
-import React from "react";
+import InputFormReservation from "./InputFormReservation";
 
 function FormReservation() {
   return (
     <div className="reservation">
-      <form action="backend/php/index.php" method="post">
-        <div className="initial_data">
-          <label htmlFor="name_card">Cardholder name</label>
-          <input
-            type="text"
-            id="name_card"
-            name="name_card"
-            placeholder="e.g. Diego Saldoval"
-            pattern="[^0-9]*"
-            title="El nombre no debe contener números"
-            required
-          />
-
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="e.g. example@email.com"
-            required
-          />
-
-          <label htmlFor="card_number">Card Number</label>
-          <input
-            type="text"
-            id="card_number"
-            name="card_number"
-            placeholder="e.g. 1234 5678 9123 0000"
-            pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}"
-            title="El número de tarjeta debe seguir el formato: 1234 5678 9123 0000"
-            required
-          />
-        </div>
-
-        <div className="expiration">
-          <div>
-            <label htmlFor="card_month">Exp. date (MM/YY)</label>
-            <input
-              type="text"
-              id="card_month"
-              name="card_month"
-              placeholder="MM"
-              pattern="(0[1-9]|1[0-2])"
-              title="El mes debe ser un valor entre 01 y 12"
-              required
+      <div
+        style={{
+          padding: "20px",
+          width: "90%",
+          maxWidth: "450px",
+          margin: "0 auto",
+          border: "1px solid #444",
+          borderRadius: "10px",
+          backgroundColor: "#1b1b1b",
+          color: "#f5f5f5",
+          maxHeight: "500px",
+        }}
+      >
+        <form method="post" className="form__reservation">
+          <h3
+            style={{
+              fontSize: "2rem",
+              textAlign: "center",
+            }}
+          >
+            Reservacion
+          </h3>
+          <div className="initial_data" style={{ marginBottom: "20px" }}>
+            <InputFormReservation
+              label={"Nombre"}
+              type={"text"}
+              placeholder={"e.g. John Doe"}
             />
-          </div>
 
-          <div>
-            <label htmlFor="card_year">&nbsp;</label>
-            <input
-              type="text"
-              id="card_year"
-              name="card_year"
-              placeholder="YY"
-              pattern="\d{2}"
-              title="El año debe ser un valor de 2 dígitos"
+            <label
+              htmlFor="product"
+              style={{
+                display: "block",
+                marginBottom: "10px",
+                color: "#f5f5f5",
+                fontSize: "1.2rem"
+              }}
+            >
+              Producto
+            </label>
+            <select
+              id="product"
+              name="product"
               required
-            />
-          </div>
+              style={{
+                width: "100%",
+                padding: "10px",
+                marginBottom: "20px",
+                borderRadius: "5px",
+                border: "1px solid #555",
+                backgroundColor: "#2c2c2c",
+                color: "#f5f5f5",
+              }}
+            >
+              <option value="licuado_vino">Licuado de Vino</option>
+              <option value="licuado_fresa">Licuado de Fresa</option>
+            </select>
 
-          <div>
-            <label htmlFor="card_cvc">CVC</label>
-            <input
-              type="text"
-              id="card_cvc"
-              name="card_cvc"
-              placeholder="e.g. 123"
-              pattern="\d{3}"
-              title="El CVC debe tener 3 dígitos"
-              required
-            />
-          </div>
-        </div>
+            <div className="container__secondSectionForm">
+              <InputFormReservation
+                label={"Precio"}
+                type={"text"}
+                placeholder={"$ 0.00"}
+              />
 
-        <button type="submit">Confirm</button>
-      </form>
+              <InputFormReservation
+                label={"Cantidad"}
+                type={"number"}
+                placeholder={"4"}
+              />
+            </div>
+
+            <button
+              type="submit"
+              style={{
+                width: "100%",
+                padding: "12px",
+                backgroundColor: "#000",
+                color: "#f5f5f5",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+            >
+              Confirmar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
