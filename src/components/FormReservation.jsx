@@ -1,6 +1,7 @@
 import InputFormReservation from "./InputFormReservation";
 
 function FormReservation() {
+  const licuado = "Fruit Burst De";
   return (
     <div className="reservation">
       <div
@@ -22,7 +23,7 @@ function FormReservation() {
               fontSize: "2rem",
               textAlign: "center",
               marginBottom: "1rem",
-              textDecoration: "underline"
+              textDecoration: "underline",
             }}
           >
             Reservacion
@@ -60,36 +61,102 @@ function FormReservation() {
                 fontSize: "1.5rem",
               }}
             >
-              <option value="licuado_vino">Fruit Burst De Fresa</option>
-              <option value="licuado_fresa">Fruit Burst De Fresa</option>
-              <option value="licuado_fresa">Fruit Burst De Oreo</option>
+              <option>{licuado} Fresa</option>
+              <option>{licuado} Banana</option>
+              <option>{licuado} Oreo</option>
             </select>
 
             <div className="container__secondSectionForm">
-              <InputFormReservation
-                label={"Precio"}
-                type={"text"}
-                placeholder={"$ 0.00"}
-              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                }}
+              >
+                <label
+                  htmlFor="name"
+                  style={{
+                    display: "block",
+                    marginBottom: "10px",
+                    color: "#f5f5f5",
+                    fontSize: "1.6rem",
+                  }}
+                >
+                  Precio
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="$0.00"
+                  title="Debe ingresar un nombre y apellido"
+                  required
+                  readOnly
+                  value="1.50"
+                  style={{
+                    width: "100%",
+                    padding: "10px",
+                    marginBottom: "20px",
+                    borderRadius: "5px",
+                    border: "1px solid #555",
+                    backgroundColor: "#2c2c2c",
+                    color: "#f5f5f5",
+                    fontSize: "1.5rem",
+                  }}
+                />
+              </div>
 
-              <InputFormReservation
-                label={"Cantidad"}
-                type={"number"}
-                placeholder={"4"}
-              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                }}
+              >
+                <label
+                  htmlFor="name"
+                  style={{
+                    display: "block",
+                    marginBottom: "10px",
+                    color: "#f5f5f5",
+                    fontSize: "1.6rem",
+                  }}
+                >
+                  Cantidad
+                </label>
+                <input
+                  type="number"
+                  id="cantidad"
+                  name="cantidad"
+                  max="5"
+                  min="1"
+                  defaultValue="1"
+                  style={{
+                    width: "100%",
+                    padding: "10px",
+                    marginBottom: "20px",
+                    borderRadius: "5px",
+                    border: "1px solid #555",
+                    backgroundColor: "#2c2c2c",
+                    color: "#f5f5f5",
+                    fontSize: "1.5rem",
+                  }}
+                />
+              </div>
             </div>
 
             <button
               type="submit"
               style={{
                 width: "100%",
-                padding: "1rem",
-                backgroundColor: "#000",
-                color: "#f5f5f5",
-                border: "none",
+                padding: "10px",
+                marginBottom: "20px",
                 borderRadius: "5px",
-                cursor: "pointer",
-                fontSize: "1.6rem",
+                border: "1px solid #555",
+                backgroundColor: "#2c2c2c",
+                color: "#f5f5f5",
+                fontSize: "1.5rem",
               }}
             >
               Confirmar
