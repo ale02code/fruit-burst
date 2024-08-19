@@ -1,6 +1,14 @@
+import { useContext } from "react";
+import { ReservationContext } from "../context/ReservationContext";
 import Button from "./Button";
 
 function ProductView({ title, desc, topping, fruit, product, price }) {
+  const { setReservation } = useContext(ReservationContext);
+
+  const handleReservation = () => {
+    setReservation((prevState) => !prevState);
+  };  
+
   return (
     <div className="menu__product menu__product__one">
       <div className="menu__product__imgs">
@@ -19,8 +27,12 @@ function ProductView({ title, desc, topping, fruit, product, price }) {
           ¡Puedes agregarle como topping {topping}!
         </p>
         <div className="menu__product__view__price">
-          <p className="menu__product__view__price__content">Precio: ${price}</p>
-          <Button text={"Reservar"} />
+          <p className="menu__product__view__price__content">
+            Precio: ${price}
+          </p>
+          <div onClick={handleReservation}>
+            <Button text={"Reservar"} />
+          </div>
         </div>
       </section>
     </div>
