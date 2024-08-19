@@ -30,9 +30,11 @@ function ProductView({ title, desc, topping, fruit, product, price }) {
           <p className="menu__product__view__price__content">
             Precio: ${price}
           </p>
-          <div onClick={handleReservation}>
-            <Button text={"Reservar"} />
-          </div>
+        
+            <button className="button_component" onClick={handleReservation}>
+             Reservar
+           </button>
+      
         </div>
       </section>
     </div>
