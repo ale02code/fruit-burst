@@ -38,7 +38,7 @@ function FormReservation() {
                 display: "block",
                 marginBottom: "10px",
                 color: "#f5f5f5",
-                fontSize: "1.2rem"
+                fontSize: "1.6rem"
               }}
             >
               Producto
@@ -55,6 +55,7 @@ function FormReservation() {
                 border: "1px solid #555",
                 backgroundColor: "#2c2c2c",
                 color: "#f5f5f5",
+                fontSize: "1.5rem"
               }}
             >
               <option value="licuado_vino">Licuado de Vino</option>
@@ -79,12 +80,13 @@ function FormReservation() {
               type="submit"
               style={{
                 width: "100%",
-                padding: "12px",
+                padding: "1rem",
                 backgroundColor: "#000",
                 color: "#f5f5f5",
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",
+                fontSize: "1.6rem"
               }}
             >
               Confirmar

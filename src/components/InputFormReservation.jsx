@@ -2,7 +2,8 @@ function InputFormReservation({ label, type, placeholder }) {
   return (
     <div style={{
       display: "flex",
-      flexDirection: "column"
+      flexDirection: "column",
+      width: "100%"
     }}>
       <label
         htmlFor="name"
@@ -10,7 +11,7 @@ function InputFormReservation({ label, type, placeholder }) {
           display: "block",
           marginBottom: "10px",
           color: "#f5f5f5",
-          fontSize: "1.2rem"
+          fontSize: "1.6rem"
         }}
       >
         {label}
@@ -30,6 +31,7 @@ function InputFormReservation({ label, type, placeholder }) {
           border: "1px solid #555",
           backgroundColor: "#2c2c2c",
           color: "#f5f5f5",
+          fontSize: "1.5rem"
         }}
       />
     </div>
