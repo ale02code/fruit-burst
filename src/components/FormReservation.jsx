@@ -21,6 +21,8 @@ function FormReservation() {
             style={{
               fontSize: "2rem",
               textAlign: "center",
+              marginBottom: "1rem",
+              textDecoration: "underline"
             }}
           >
             Reservacion
@@ -38,7 +40,7 @@ function FormReservation() {
                 display: "block",
                 marginBottom: "10px",
                 color: "#f5f5f5",
-                fontSize: "1.6rem"
+                fontSize: "1.6rem",
               }}
             >
               Producto
@@ -55,11 +57,12 @@ function FormReservation() {
                 border: "1px solid #555",
                 backgroundColor: "#2c2c2c",
                 color: "#f5f5f5",
-                fontSize: "1.5rem"
+                fontSize: "1.5rem",
               }}
             >
-              <option value="licuado_vino">Licuado de Vino</option>
-              <option value="licuado_fresa">Licuado de Fresa</option>
+              <option value="licuado_vino">Fruit Burst De Fresa</option>
+              <option value="licuado_fresa">Fruit Burst De Fresa</option>
+              <option value="licuado_fresa">Fruit Burst De Oreo</option>
             </select>
 
             <div className="container__secondSectionForm">
@@ -86,7 +89,7 @@ function FormReservation() {
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",
-                fontSize: "1.6rem"
+                fontSize: "1.6rem",
               }}
             >
               Confirmar
