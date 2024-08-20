@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { ReservationContext } from "../context/ReservationContext";
-import Button from "./Button";
 
 function ProductView({ title, desc, topping, fruit, product, price }) {
   const { setReservation } = useContext(ReservationContext);
 
   const handleReservation = () => {
     setReservation((prevState) => !prevState);
-  };  
+  };
 
   return (
     <div className="menu__product menu__product__one">
@@ -30,11 +29,10 @@ function ProductView({ title, desc, topping, fruit, product, price }) {
           <p className="menu__product__view__price__content">
             Precio: ${price}
           </p>
-        
-            <button className="button_component" onClick={handleReservation}>
-             Reservar
-           </button>
-      
+
+          <button className="button_component" onClick={handleReservation}>
+            Reservar
+          </button>
         </div>
       </section>
     </div>
