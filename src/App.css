@@ -502,6 +502,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     gap: 2%;
   }
 
@@ -519,7 +520,6 @@
     height: auto;
     overflow: hidden;
     display: flex;
-    flex-direction: column-reverse;
     gap: 1rem;
     padding: 2rem;
   }
