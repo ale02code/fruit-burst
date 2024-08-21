@@ -1,17 +1,17 @@
 import { useContext } from "react";
-import { RequestContext } from "../context/ResquestResponse";
+import { RequestContext } from "../context/RequestContext";
 
 function ResponseWindow({ img, text }) {
-  const { setResponseMessage } = useContext(RequestContext);
+  const { setIsRequestSuccessful } = useContext(RequestContext);
 
   const handleCloseMsg = () => {
-    setResponseMessage(null);
+    setIsRequestSuccessful(false);
   };
 
   return (
     <section className="fetchResponse" onClick={handleCloseMsg}>
       <div className="fetchResponse__content">
-        <img src={img} alt="img of img" className="fetchResponse__img" />
+        <img src={img} alt="response image" className="fetchResponse__img" />
         <h1 className="fetchResponse__text">{text}</h1>
       </div>
     </section>

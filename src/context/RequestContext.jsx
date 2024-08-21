@@ -3,10 +3,12 @@ import { createContext, useState } from "react";
 export const RequestContext = createContext();
 
 export const RequestContextProvider = ({ children }) => {
-  const [responseMessage, setResponseMessage] = useState(null);
+  const [isRequestSuccessful, setIsRequestSuccessful] = useState(null);
 
   return (
-    <RequestContext.Provider value={{ responseMessage, setResponseMessage }}>
+    <RequestContext.Provider
+      value={{ isRequestSuccessful, setIsRequestSuccessful }}
+    >
       {children}
     </RequestContext.Provider>
   );

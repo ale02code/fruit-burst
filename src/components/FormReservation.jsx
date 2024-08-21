@@ -1,10 +1,10 @@
 import { useState, useContext, useEffect } from "react";
 import { ReservationContext } from "../context/ReservationContext";
-import { RequestContext } from "../context/ResquestResponse";
+import { RequestContext } from "../context/RequestContext";
 
 function FormReservation() {
   const { setReservation } = useContext(ReservationContext);
-  const { setErrorRequest } = useContext(RequestContext);
+  const { setIsRequestSuccessful } = useContext(RequestContext);
   const licuado = "Fruit Burst De";
 
   const [valuePrice, setValuePrice] = useState(1.5);
@@ -27,14 +27,14 @@ function FormReservation() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: name === "cantidad" ? Number(value) : value,
-    });
+    }));
   };
 
   const handleCloseForm = () => {
-    setReservation((prevState) => !prevState);
+    setReservation(false);
   };
 
   const handleSubmit = async (e) => {
@@ -54,18 +54,17 @@ function FormReservation() {
       );
 
       if (response.ok) {
-        const result = await response.json();
-        alert(
-          `Reserva enviada con éxito. ID de la reservación: ${result.reservacion_id}`
-        );
-      } else {
-        const errorData = await response.json();
+        await response.json();
         setReservation(false);
+        setIsRequestSuccessful(true); // Solicitud exitosa
+      } else {
+        await response.json();
+        setReservation(false);
+        setIsRequestSuccessful(false); // Solicitud fallida
       }
     } catch (error) {
       console.error("Error de red:", error);
-      setErrorRequest(true);
-      alert("Error de red al intentar enviar la reserva.");
+      setIsRequestSuccessful(false); // Error de red
     } finally {
       setIsSubmitting(false);
     }
