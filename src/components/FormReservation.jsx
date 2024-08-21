@@ -100,7 +100,7 @@ function FormReservation() {
             >
               Reservacion
             </h3>
-            <div className="initial_data" style={{ marginBottom: "20px" }}>
+            <div className="initial_data">
               <div
                 style={{
                   display: "flex",
