@@ -8,22 +8,24 @@ function Menu() {
   return (
     <main className="menu" id="menu">
       <h3 className="menu__title">Menú</h3>
-      <ProductView
-        title={"Banana Milk"}
-        desc={"Delicioso licuado de banano, acompañado de trocitos de banano"}
-        topping={"canela molida"}
-        fruit={BananoImg}
-        product={BananoBurstImg}
-        price={"1.50"}
-      />
-      <ProductView
-        title={"Fresa Milk"}
-        desc={"Delicioso licuado de fresa, acompañado de trocitos de fresa"}
-        topping={"canela molida"}
-        fruit={FresasImg}
-        product={FresaBurstImg}
-        price={"1.50"}
-      />
+      <div className="menu__content">
+        <ProductView
+          title={"Banana Milk"}
+          desc={"Delicioso licuado de banano, acompañado de trocitos de banano"}
+          topping={"canela molida"}
+          fruit={BananoImg}
+          product={BananoBurstImg}
+          price={"1.50"}
+        />
+        <ProductView
+          title={"Fresa Milk"}
+          desc={"Delicioso licuado de fresa, acompañado de trocitos de fresa"}
+          topping={"canela molida"}
+          fruit={FresasImg}
+          product={FresaBurstImg}
+          price={"1.50"}
+        />
+      </div>
     </main>
   );
 }

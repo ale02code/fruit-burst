@@ -76,6 +76,7 @@ function FormReservation() {
 
       <div className="reservation__background">
         <div
+          className="form__content"
           style={{
             padding: "20px",
             width: "90%",
@@ -107,15 +108,7 @@ function FormReservation() {
                   width: "100%",
                 }}
               >
-                <label
-                  htmlFor="name"
-                  style={{
-                    display: "block",
-                    marginBottom: "10px",
-                    color: "#f5f5f5",
-                    fontSize: "1.6rem",
-                  }}
-                >
+                <label htmlFor="name" className="label__form__reservation">
                   Nombre
                 </label>
                 <input
@@ -128,44 +121,18 @@ function FormReservation() {
                   placeholder={"e.g Eduardo Vargas..."}
                   onChange={handleChange}
                   required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    marginBottom: "20px",
-                    borderRadius: "5px",
-                    border: "1px solid #555",
-                    backgroundColor: "#2c2c2c",
-                    color: "#f5f5f5",
-                    fontSize: "1.5rem",
-                  }}
+                  className="input__form__reservation"
                 />
               </div>
 
-              <label
-                htmlFor="producto"
-                style={{
-                  display: "block",
-                  marginBottom: "10px",
-                  color: "#f5f5f5",
-                  fontSize: "1.6rem",
-                }}
-              >
+              <label htmlFor="producto" className="label__form__reservation">
                 Producto
               </label>
               <select
                 id="producto"
                 name="producto"
+                className="input__form__reservation"
                 required
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "20px",
-                  borderRadius: "5px",
-                  border: "1px solid #555",
-                  backgroundColor: "#2c2c2c",
-                  color: "#f5f5f5",
-                  fontSize: "1.5rem",
-                }}
                 onChange={handleChange}
               >
                 <option value={`${licuado} Fresa`}>{licuado} Fresa</option>
@@ -181,35 +148,18 @@ function FormReservation() {
                     width: "100%",
                   }}
                 >
-                  <label
-                    htmlFor="precio"
-                    style={{
-                      display: "block",
-                      marginBottom: "10px",
-                      color: "#f5f5f5",
-                      fontSize: "1.6rem",
-                    }}
-                  >
+                  <label htmlFor="precio" className="label__form__reservation">
                     Precio
                   </label>
                   <input
                     type="text"
                     id="precio"
                     name="precio"
+                    className="input__form__reservation"
                     placeholder="$0.00"
                     required
                     readOnly
                     value={`$ ${formData.precio}`}
-                    style={{
-                      width: "100%",
-                      padding: "10px",
-                      marginBottom: "20px",
-                      borderRadius: "5px",
-                      border: "1px solid #555",
-                      backgroundColor: "#2c2c2c",
-                      color: "#f5f5f5",
-                      fontSize: "1.5rem",
-                    }}
                   />
                 </div>
 
@@ -222,12 +172,7 @@ function FormReservation() {
                 >
                   <label
                     htmlFor="cantidad"
-                    style={{
-                      display: "block",
-                      marginBottom: "10px",
-                      color: "#f5f5f5",
-                      fontSize: "1.6rem",
-                    }}
+                    className="label__form__reservation"
                   >
                     Cantidad
                   </label>
@@ -235,21 +180,12 @@ function FormReservation() {
                     type="number"
                     id="cantidad"
                     name="cantidad"
+                    className="input__form__reservation"
                     max="5"
                     min="1"
                     required
                     defaultValue="1"
                     onChange={handleChange}
-                    style={{
-                      width: "100%",
-                      padding: "10px",
-                      marginBottom: "20px",
-                      borderRadius: "5px",
-                      border: "1px solid #555",
-                      backgroundColor: "#2c2c2c",
-                      color: "#f5f5f5",
-                      fontSize: "1.5rem",
-                    }}
                   />
                 </div>
               </div>
@@ -257,16 +193,7 @@ function FormReservation() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "20px",
-                  borderRadius: "5px",
-                  border: "1px solid #555",
-                  backgroundColor: "#2c2c2c",
-                  color: "#f5f5f5",
-                  fontSize: "1.5rem",
-                }}
+                className="button__form__reservation"
               >
                 Confirmar
               </button>
