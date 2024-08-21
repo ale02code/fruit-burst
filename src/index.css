@@ -26,3 +26,48 @@ body::-webkit-scrollbar {
 .container {
   position: relative;
 }
+
+.fetchResponse {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1300;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fetchResponse__content {
+  background-color: rgba(200, 200, 200, 1);
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.2rem;
+  border-radius: 1rem;
+  animation: zoom 2s ease-in-out forwards;
+  -webkit-animation: zoom .5s ease-in-out forwards;
+}
+
+.fetchResponse__img {
+  height: 200px;
+}
+
+.fetchResponse__text {
+  text-align: center;
+  text-wrap: pretty;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+}
+}
