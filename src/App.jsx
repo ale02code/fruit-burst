@@ -40,7 +40,12 @@ function App() {
       {showFirstScreen && <FirstScreen />}
       <Header />
       {isRequestSuccessful !== null && (
-        <ResponseWindow text={"SUCCESS"} img={CheckImg} />
+        <ResponseWindow
+          text={
+            "Tu pedido fue realizado con exito. pásalo a recoger el 22 o 23 de Agosto"
+          }
+          img={CheckImg}
+        />
       )}
       {reservation && <FormReservation />}
       <Home />
