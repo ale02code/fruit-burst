@@ -305,6 +305,15 @@
   letter-spacing: 1px;
 }
 
+
+.menu__content {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Ubication */
 .ubication {
   height: auto;
