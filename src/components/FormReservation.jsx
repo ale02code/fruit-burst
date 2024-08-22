@@ -18,12 +18,12 @@ function FormReservation() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    const totalPrice = valuePrice * formData.cantidad;
+    // const totalPrice = valuePrice * formData.cantidad;
     setFormData((prevData) => ({
       ...prevData,
-      precio: totalPrice.toFixed(2),
+      // precio: totalPrice.toFixed(2),
     }));
-  }, [formData.cantidad, valuePrice]);
+  }, [formData.cantidad]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
