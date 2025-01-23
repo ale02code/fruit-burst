@@ -1,5 +1,5 @@
 {
-  "name": "minor-metal",
+  "name": "fruit-burst",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "astro": "^5.1.8"
+  },
+  "author": {
+    "name": "Christopher Chacon"
   }
 }
